@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Samarth's Professional Portfolio">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Samarth | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Samarth Sharma</span>
+            </div>
+            <div class="links">
+                <div class="link"><a href="#home">Home</a></div>
+                <div class="link"><a href="#about">About</a></div>
+                <div class="link"><a href="#skills">Skills</a></div>
+                <div class="link"><a href="#projects">Projects</a></div>
+                <div class="link"><a href="#experience">Experience</a></div>
+                <div class="link"><a href="#contact">Contact</a></div>
+
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="mobile-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="home-section">
+        <div class="main-container">
+            <div class="image" data-aos="zoom-in-right" data-aos-duration="1500">
+                <img src="./images/main.jpg" alt="Samarth's Profile Picture">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left">Hey I'm <span>Samarth</span></h1>
+                <div class="typewriter" data-aos="fade-right">
+                    <div class="text">I'm a <span class="auto-type"></span></div>
+                </div>
+                <p data-aos="fade-up">Software developer exploring GenAI, passionate about DSA, problem-solving, and building smart, scalable systems.</p>
+                <div class="social-links" data-aos="fade-up">
+                    <a href="https://github.com/saysamarth" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/saysamarth/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:samarth2668@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+                <div class="btn" data-aos="fade-up">
+                    <a href="./assets/Samarth_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                        <button>View Resume</button>
+                    </a>                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="section" data-aos="fade-up">
+        <div class="section-container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p>Hi, I'm Samarth Sharma, an app developer with a passion for building user-centered applications using Flutter. Currently pursuing my 3rd-year B.Tech in Computer Science at USICT, I'm actively involved with the Google Developers Group (GDG), where I collaborate with fellow tech enthusiasts to learn and grow.</p>
+                    
+                    <p>I'm currently deepening my understanding of Data Structures and Algorithms to enhance my problem-solving skills. Seeking challenging opportunities to grow as a developer and contribute to impactful projects, I'm eager to connect with industry professionals and explore roles where I can apply my skills while learning from experienced teams.</p>
+    
+                    <p>If you're interested in collaborating or need development support, feel free to reach out - let's build something exceptional together!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="section-container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <!-- Technical Skills -->
+                <div class="skill-column" data-aos="fade-right">
+                    <div class="skill-card">
+                        <h3>Technical Skills</h3>
+                        <div class="tech-skills-grid">
+                            <div class="skill-category">
+                                <div class="skill-header">
+                                    <i class="fas fa-code"></i>
+                                    <h4> Programming Languages</h4>
+                                </div>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">C</span>
+                                    <span class="skill-tag">C++</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Dart</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <div class="skill-header">
+                                    <i class="fas fa-database"></i>
+                                    <h4>Frontend & Mobile Development</h4>
+                                </div>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Flutter</span>
+                                    <span class="skill-tag">BLoC</span>
+                                    <span class="skill-tag">Provider</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <div class="skill-header">
+                                    <i class="fas fa-layer-group"></i>
+                                    <h4>Backend & Development Tools</h4>
+                                </div>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">Express.js</span>
+                                    <span class="skill-tag">Socket.io</span>
+                                    <span class="skill-tag">REST API</span>
+                                    <span class="skill-tag">git</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <div class="skill-header">
+                                    <i class="fas fa-layer-group"></i>
+                                    <h4>Databases</h4>
+                                </div>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Firebase</span>
+                                    <span class="skill-tag">MongoDB</span>
+                                    <span class="skill-tag">MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Professional Skills (keeping this part as is) -->
+                <div class="skill-column" data-aos="fade-left">
+                    <div class="skill-card">
+                        <h3>Professional Skills</h3>
+                        <div class="circles-container">
+                            <div class="skill-circle">
+                                <div class="circle" data-percent="85">
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-name">Adaptive Problem-Solving</div>
+                            </div>
+                            <div class="skill-circle">
+                                <div class="circle" data-percent="80">
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-name">Collaborative Leadership</div>
+                            </div>
+                            <div class="skill-circle">
+                                <div class="circle" data-percent="90">
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-name">TeamWork</div>
+                            </div>
+                            <div class="skill-circle">
+                                <div class="circle" data-percent="80">
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-name">Communication</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section" data-aos="fade-up">
+        <div class="section-container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-aos="flip-left" data-aos-delay="200">
+                    <img src="images/Brevity.jpg" alt="News App">
+                    <div class="project-info">
+                        <h3>BREVITY</h3>
+                        <p>A real-time news app delivering concise 60-word summaries, featuring infinite scrolling, category-based feeds, and
+                            customizable themes for an engaging experience.
+                        </p><p>Key features include an AI chatbot for news queries, robust keyword search, direct full article access, optimized image
+                            caching, bookmarking, and dynamic routing for smooth navigation</p>
+                        <a href="https://github.com/Yash159357/BREVITY" class="project-link">
+                            View on GitHub 
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>  
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="flip-left">
+                    <img src="images/TrackMyAttendance.jpeg" alt="Attendance Tracker">
+                    <div class="project-info">
+                        <h3>TrackMyAttendance</h3>
+                        <p>A real-time attendance tracking app with Firebase integration, utilizing geolocation (Geolocator) and image capture
+                            (ImagePicker) for secure check-ins and check-outs.
+                        </p><p>Features include attendance history, monthly reports visualized in pie charts, location mapping, secure authentication,
+                            and user feedback through snack bars and dialogs.</p>
+                        <a href="https://github.com/saysamarth/TrackMyAttendance" class="project-link">
+                            View on GitHub 
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="flip-left">
+                    <img src="images/expenseTracker.jpeg" alt="Expense Tracker">
+                    <div class="project-info">
+                        <h3>Expense Tracker</h3>
+                        <p>About
+                            This is a Flutter-based expense tracking app. It may be used in both light and dark modes, according to the system mode. 
+                            The software will create a chart based on the expenses under the specified category after the user adds expenses under that category. Additionally, the user can remove the expenses as needed.
+                        </p>
+                        <a href="https://github.com/saysamarth/Expense-Tracker" class="project-link">
+                            View on GitHub 
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section" data-aos="fade-up">
+        <div class="section-container">
+            <h2 class="section-title">Work Experience</h2>
+            
+            <div class="experience-column">
+                <!-- Experience 1 -->
+                <div class="experience-item" data-aos="fade-up">
+                    <div class="experience-header">
+                        <div class="experience-date">Dec 2024 - Feb 2025</div>
+                        <h3>Software Developer Intern </h3>
+                        <div class="company">Jaymant & Sons (OPC) Pvt. Ltd. </div>
+                    </div>
+                    <div class="experience-content">
+                        <p>Developed scalable and user-friendly UI/UX components, integrating REST APIs and Firebase for real-time data
+                            handling.
+                            Implemented Bloc for state management, reducing unnecessary widget rebuilds, and improving performance by 20%
+                            Collaborated with a team of 4+ members to build features for a cross-platform app targeting 10,000+ users</p>
+                        <div class="skills-used">
+                            <span class="skill-tag">Flutter,</span>
+                            <span class="skill-tag">Firebase,</span>
+                            <span class="skill-tag">REST API,</span>
+                            <span class="skill-tag">BLoC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="experience-header">
+                        <div class="experience-date">July 2024 - August 2024</div>
+                        <h3>Summer Internship</h3>
+                        <div class="company">IBM SkillsBuild Summer Internship Program (CSRBOX)</div>
+                    </div>
+                    <div class="experience-content">
+                        <p>Developed a healthcare chatbot prototype using IBM Watson Assistant, optimizing over 30 user interactions
+                            through prompt engineering.
+                            Applied AI tools to create a functional model that streamlined responses to common queries and booking requests,
+                            achieving 80% coverage of frequently asked questions during the CSRBOX internship.</p>
+                        <div class="skills-used">
+                            <span class="skill-tag">AI,</span>
+                            <span class="skill-tag">NLP,</span>
+                            <span class="skill-tag">IBM Watson Assistant</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" data-aos="fade-up">
+        <div class="section-container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>New Delhi, India</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>samarth2668@gmail.com</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/saysamarth" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/saysamarth/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="mailto:samarth2668@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" 
+                    action="https://formspree.io/f/xdkeplvj" 
+                    method="POST"
+                    data-aos="fade-left"
+                    id="myForm"> <!-- Added ID -->
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Mobile Menu Functionality
+        function hamburg() {
+            document.querySelector(".dropdown").style.transform = "translateY(0)";
+            document.body.style.overflow = "hidden";
+        }
+
+        function cancel() {
+            document.querySelector(".dropdown").style.transform = "translateY(-100%)";
+            document.body.style.overflow = "auto";
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.hamburg') && !e.target.closest('.dropdown')) {
+                cancel();
+            }
+        });
+
+        // Initialize AOS
+        AOS.init({
+            offset: 100,
+            duration: 800,
+            easing: 'ease',
+            once: true
+        });
+
+        // Initialize Typed.js
+        const typed = new Typed('.auto-type', {
+            strings: ['Developer', 'Designer', 'Tech Enthusiast'],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+    <script>
+        const form = document.getElementById('myForm');
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const submitButton = event.target.querySelector('button[type="submit"]');
+            try {
+                submitButton.classList.add('loading');
+                submitButton.disabled = true;
+                const formData = new FormData(event.target);
+                const response = await fetch(event.target.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+                form.reset();
+                alert('Message sent successfully!');
+            } else {
+                alert('Submission failed. Please try again.');
+            }
+            } catch (error) {
+                alert('Network error. Please check your connection.');
+            } finally {
+                submitButton.classList.remove('loading');
+                submitButton.disabled = false;
+            }
+        }
+        form.addEventListener('submit', handleSubmit);
+    </script>
+</body>
+</html>
