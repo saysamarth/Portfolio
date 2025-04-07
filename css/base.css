@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #0a192f;
+    --text-color: #ccd6f6;
+    --accent-color: #64ffda;
+    --navy-shadow: rgba(2,12,27,0.7);
+    --standard-padding: 2rem;
+    --section-padding: 3.5rem 7%;
+    --card-padding: 1.5rem;
+    --border-radius-sm: 8px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 12px;
+    --accent-bg-light: rgba(100, 255, 218, 0.05);
+    --accent-border: rgba(100, 255, 218, 0.1);
+    --text-color-muted: rgba(204, 214, 246, 0.9);
+    --standard-gap: 1.5rem;
+    --standard-transition: all 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Common Components */
+.section {
+    padding: var(--section-padding);
+    position: relative;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--accent-color);
+}
+
+button {
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.8rem 2rem;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: var(--standard-transition);
+    font-weight: 600;
+}
+
+button:hover {
+    background: rgba(100, 255, 218, 0.1);
+    transform: translateY(-2px);
+}

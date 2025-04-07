@@ -1,0 +1,12 @@
+@import 'base.css';
+
+@import 'layout.css';
+
+@import 'skills.css';
+@import 'projects.css';
+@import 'experience.css';
+@import 'contact.css';
+
+@import 'animation.css';
+
+@import 'mediaQuery.css';
