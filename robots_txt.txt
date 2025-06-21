@@ -1,0 +1,29 @@
+# robots.txt for Samarth Sharma Portfolio
+# https://saysamarth.github.io/
+
+User-agent: *
+Allow: /
+
+# Allow all crawlers to access CSS, JS, and images
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+Allow: /script.js
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.pdf$
+
+# Disallow crawling of any admin or private directories (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://saysamarth.github.io/sitemap.xml
+
+# Crawl-delay (optional - removes if causing issues)
+Crawl-delay: 1

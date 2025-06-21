@@ -1,31 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Essential Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Samarth's Professional Portfolio">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Samarth Sharma">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Samarth Sharma - Flutter Developer & Software Engineer | GGSIPU | Portfolio</title>
+    <meta name="title" content="Samarth Sharma - Flutter Developer & Software Engineer | GGSIPU | Portfolio">
+    <meta name="description" content="Samarth Sharma (saysamarth) - Flutter Developer, Software Engineer & GenAI Enthusiast from GGSIPU. View my portfolio showcasing mobile apps, full-stack projects, and AI solutions. Available for hire.">
+    <meta name="keywords" content="Samarth Sharma, saysamarth, Flutter Developer, Software Engineer, GGSIPU, Guru Govind Singh Indraprastha University, Mobile App Developer, Full Stack Developer, GenAI, AI ML, Portfolio, New Delhi Developer, Hire Flutter Developer">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://saysamarth.github.io/">
+    <meta property="og:title" content="Samarth Sharma - Flutter Developer & Software Engineer Portfolio">
+    <meta property="og:description" content="Flutter Developer & Software Engineer specializing in mobile apps, full-stack development, and GenAI. Student at GGSIPU with expertise in Dart, Python, JavaScript.">
+    <meta property="og:image" content="https://saysamarth.github.io/assets/images/main.jpg">
+    <meta property="og:image:alt" content="Samarth Sharma - Flutter Developer Profile Picture">
+    <meta property="og:site_name" content="Samarth Sharma Portfolio">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://saysamarth.github.io/">
+    <meta property="twitter:title" content="Samarth Sharma - Flutter Developer & Software Engineer Portfolio">
+    <meta property="twitter:description" content="Flutter Developer & Software Engineer specializing in mobile apps, full-stack development, and GenAI. Student at GGSIPU.">
+    <meta property="twitter:image" content="https://saysamarth.github.io/assets/images/main.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://saysamarth.github.io/">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Samarth Sharma",
+        "alternateName": "saysamarth",
+        "description": "Flutter Developer, Software Engineer, and GenAI Enthusiast",
+        "url": "https://saysamarth.github.io/",
+        "image": "https://saysamarth.github.io/assets/images/main.jpg",
+        "sameAs": [
+            "https://github.com/saysamarth",
+            "https://www.linkedin.com/in/saysamarth/"
+        ],
+        "jobTitle": "Software Developer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Jaymant & Sons (OPC) Pvt. Ltd."
+        },
+        "alumniOf": {
+            "@type": "Organization",
+            "name": "Guru Govind Singh Indraprastha University",
+            "alternateName": "GGSIPU"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "New Delhi",
+            "addressCountry": "India"
+        },
+        "email": "samarth2668@gmail.com",
+        "knowsAbout": ["Flutter", "Dart", "Mobile App Development", "Full Stack Development", "GenAI", "Machine Learning", "Python", "JavaScript", "Firebase", "Node.js"],
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Software Developer",
+            "occupationLocation": {
+                "@type": "City",
+                "name": "New Delhi"
+            }
+        }
+    }
+    </script>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" as="style">
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="preload" href="assets/images/main.jpg" as="image">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <title>Samarth | Portfolio</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Google Analytics (replace with your tracking ID) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script> -->
 </head>
 <body>
-    <nav>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link sr-only">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
                 <span>Samarth Sharma</span>
             </div>
             <div class="links">
-                <div class="link"><a href="#home">Home</a></div>
-                <div class="link"><a href="#about">About</a></div>
-                <div class="link"><a href="#skills">Skills</a></div>
-                <div class="link"><a href="#projects">Projects</a></div>
-                <div class="link"><a href="#experience">Experience</a></div>
-                <div class="link"><a href="#contact">Contact</a></div>
-
+                <div class="link"><a href="#home" aria-label="Go to home section">Home</a></div>
+                <div class="link"><a href="#about" aria-label="Learn about Samarth Sharma">About</a></div>
+                <div class="link"><a href="#skills" aria-label="View technical skills">Skills</a></div>
+                <div class="link"><a href="#projects" aria-label="View portfolio projects">Projects</a></div>
+                <div class="link"><a href="#experience" aria-label="View work experience">Experience</a></div>
+                <div class="link"><a href="#contact" aria-label="Contact Samarth Sharma">Contact</a></div>
             </div>
-            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+            <button class="hamburg" onclick="hamburg()" aria-label="Toggle mobile menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
         <div class="dropdown">
             <div class="mobile-links">
@@ -35,284 +128,313 @@
                 <a href="#projects">Projects</a>
                 <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
-
-                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+                <button class="cancel" onclick="cancel()" aria-label="Close mobile menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="home-section">
-        <div class="main-container">
-            <div class="image" data-aos="zoom-in-right" data-aos-duration="1500">
-                <img src="assets/images/main.jpg" alt="Samarth's Profile Picture">
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="home-section">
+            <div class="main-container">
+                <div class="image" data-aos="zoom-in-right" data-aos-duration="1500">
+                    <img src="assets/images/main.jpg" alt="Samarth Sharma - Flutter Developer and Software Engineer" width="400" height="500">
+                </div>
+                <div class="content">
+                    <h1 data-aos="fade-left">Hey I'm <span>Samarth</span></h1>
+                    <div class="typewriter" data-aos="fade-right">
+                        <div class="text">I'm a <span class="auto-type"></span></div>
+                    </div>
+                    <p data-aos="fade-up">Software developer exploring GenAI, passionate about DSA, Mobile app development, problem-solving, and building smart, scalable systems.</p>
+                    <div class="social-links" data-aos="fade-up" role="list" aria-label="Social media links">
+                        <a href="https://github.com/saysamarth" target="_blank" rel="noopener noreferrer" aria-label="Visit Samarth Sharma's GitHub profile">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/saysamarth/" target="_blank" rel="noopener noreferrer" aria-label="Connect with Samarth Sharma on LinkedIn">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:samarth2668@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Send email to Samarth Sharma">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="btn" data-aos="fade-up">
+                        <a href="./assets/Samarth_Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download Samarth Sharma's resume PDF">
+                            <button>View Resume</button>
+                        </a>                    
+                    </div>
+                </div>
             </div>
-            <div class="content">
-                <h1 data-aos="fade-left">Hey I'm <span>Samarth</span></h1>
-                <div class="typewriter" data-aos="fade-right">
-                    <div class="text">I'm a <span class="auto-type"></span></div>
-                </div>
-                <p data-aos="fade-up">Software developer exploring GenAI, passionate about DSA, problem-solving, and building smart, scalable systems.</p>
-                <div class="social-links" data-aos="fade-up">
-                    <a href="https://github.com/saysamarth" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/saysamarth/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="mailto:samarth2668@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i></a>
-                </div>
-                <div class="btn" data-aos="fade-up">
-                    <a href="./assets/Samarth_Resume.pdf" target="_blank" rel="noopener noreferrer">
-                        <button>View Resume</button>
-                    </a>                    
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section" data-aos="fade-up">
+            <div class="section-container">
+                <h2 class="section-title">About Samarth</h2>
+                <div class="about-content">
+                    <div class="about-text" data-aos="fade-right">
+                        <p>Hi, I'm <strong>Samarth Sharma</strong>, a passionate Flutter developer with expertise in building user-centered applications. Currently pursuing my 4th-year B.Tech in Computer Science at <strong>USICT, GGSIPU (Guru Govind Singh Indraprastha University)</strong>, I'm actively involved with the Google Developers Group (GDG), where I collaborate with fellow tech enthusiasts to learn and grow.</p>
+                        
+                        <p>I'm currently deepening my understanding of Data Structures and Algorithms to enhance my problem-solving skills. I have also hands-on experience with <strong>AI/ML and backend technologies</strong>. I'm seeking challenging opportunities to grow as a developer and contribute to impactful projects. Whether you're looking for a <strong>Flutter developer</strong> or <strong>software engineer</strong> in New Delhi, India, I'm eager to connect with industry professionals and explore roles where I can apply my skills while learning from experienced teams.</p>
+
+                        <p>If you're interested in collaborating or need development support, feel free to reach out - let's build something exceptional together!</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-    <section id="about" class="section" data-aos="fade-up">
-        <div class="section-container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text" data-aos="fade-right">
-                    <p>Hi, I'm Samarth Sharma, an app developer with a passion for building user-centered applications using Flutter. Currently pursuing my 3rd-year B.Tech in Computer Science at USICT, I'm actively involved with the Google Developers Group (GDG), where I collaborate with fellow tech enthusiasts to learn and grow.</p>
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-container">
+                <h2 class="section-title">Technical Skills & Expertise</h2>
+                <div class="skills-container">
+                    <!-- Technical Skills -->
+                    <div class="skill-column" data-aos="fade-right">
+                        <div class="skill-card">
+                            <h3>Technical Skills</h3>
+                            <div class="tech-skills-grid">
+                                <div class="skill-category">
+                                    <div class="skill-header">
+                                        <i class="fas fa-code" aria-hidden="true"></i>
+                                        <h4>Programming Languages</h4>
+                                    </div>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">C</span>
+                                        <span class="skill-tag">C++</span>
+                                        <span class="skill-tag">Python</span>
+                                        <span class="skill-tag">Dart</span>
+                                        <span class="skill-tag">JavaScript</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-category">
+                                    <div class="skill-header">
+                                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                                        <h4>Frontend & Mobile Development</h4>
+                                    </div>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Flutter</span>
+                                        <span class="skill-tag">BLoC</span>
+                                        <span class="skill-tag">Provider</span>
+                                        <span class="skill-tag">React</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-category">
+                                    <div class="skill-header">
+                                        <i class="fas fa-server" aria-hidden="true"></i>
+                                        <h4>Backend & Development Tools</h4>
+                                    </div>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Node.js</span>
+                                        <span class="skill-tag">Express.js</span>
+                                        <span class="skill-tag">Socket.io</span>
+                                        <span class="skill-tag">REST API</span>
+                                        <span class="skill-tag">Git</span>
+                                    </div>
+                                </div>
+                                <div class="skill-category">
+                                    <div class="skill-header">
+                                        <i class="fas fa-database" aria-hidden="true"></i>
+                                        <h4>Databases & Cloud</h4>
+                                    </div>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Firebase</span>
+                                        <span class="skill-tag">MongoDB</span>
+                                        <span class="skill-tag">MySQL</span>
+                                        <span class="skill-tag">Cloud Storage</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <p>I'm currently deepening my understanding of Data Structures and Algorithms to enhance my problem-solving skills. Seeking challenging opportunities to grow as a developer and contribute to impactful projects, I'm eager to connect with industry professionals and explore roles where I can apply my skills while learning from experienced teams.</p>
-    
-                    <p>If you're interested in collaborating or need development support, feel free to reach out - let's build something exceptional together!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="section">
-        <div class="section-container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-container">
-                <!-- Technical Skills -->
-                <div class="skill-column" data-aos="fade-right">
-                    <div class="skill-card">
-                        <h3>Technical Skills</h3>
-                        <div class="tech-skills-grid">
-                            <div class="skill-category">
-                                <div class="skill-header">
-                                    <i class="fas fa-code"></i>
-                                    <h4> Programming Languages</h4>
+                    <!-- Professional Skills -->
+                    <div class="skill-column" data-aos="fade-left">
+                        <div class="skill-card">
+                            <h3>Professional Skills</h3>
+                            <div class="circles-container">
+                                <div class="skill-circle">
+                                    <div class="circle" data-percent="85">
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="skill-name">Adaptive Problem-Solving</div>
                                 </div>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">C</span>
-                                    <span class="skill-tag">C++</span>
-                                    <span class="skill-tag">Python</span>
-                                    <span class="skill-tag">Dart</span>
-                                    <span class="skill-tag">JavaScript</span>
+                                <div class="skill-circle">
+                                    <div class="circle" data-percent="80">
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="skill-name">Collaborative Leadership</div>
                                 </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <div class="skill-header">
-                                    <i class="fas fa-mobile-alt"></i>
-                                    <h4>Frontend & Mobile Development</h4>
+                                <div class="skill-circle">
+                                    <div class="circle" data-percent="90">
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="skill-name">TeamWork</div>
                                 </div>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Flutter</span>
-                                    <span class="skill-tag">BLoC</span>
-                                    <span class="skill-tag">Provider</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <div class="skill-header">
-                                    <i class="fas fa-server"></i>
-                                    <h4>Backend & Development Tools</h4>
-                                </div>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Node.js</span>
-                                    <span class="skill-tag">Express.js</span>
-                                    <span class="skill-tag">Socket.io</span>
-                                    <span class="skill-tag">REST API</span>
-                                    <span class="skill-tag">git</span>
-                                </div>
-                            </div>
-                            <div class="skill-category">
-                                <div class="skill-header">
-                                    <i class="fas fa-database"></i>
-                                    <h4>Databases</h4>
-                                </div>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Firebase</span>
-                                    <span class="skill-tag">MongoDB</span>
-                                    <span class="skill-tag">MySQL</span>
+                                <div class="skill-circle">
+                                    <div class="circle" data-percent="80">
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="skill-name">Communication</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section" data-aos="fade-up">
+            <div class="section-container">
+                <h2 class="section-title">Portfolio Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card" data-aos="flip-left" data-aos-delay="200">
+                        <img src="assets/images/Brevity.jpg" alt="BREVITY News App - Flutter mobile application with AI chatbot" width="300" height="200">
+                        <div class="project-info">
+                            <h3>BREVITY - AI Powered News App</h3>
+                            <p>A real-time <strong>Flutter news app</strong> delivering concise news summaries, featuring infinite scrolling, category-based feeds, and customizable themes for an engaging user experience.</p>
+                            <p>Key features include an <strong>AI chatbot</strong> for news queries, robust keyword search, optimized image caching, bookmarking, and dynamic routing for smooth navigation.</p>
+
+                            <a href="https://github.com/Yash159357/BREVITY" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View BREVITY project on GitHub">
+                                View on GitHub 
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 2 -->
+                                         <article class="project-card" data-aos="flip-left">
+                        <img src="assets/images/doodly.png" alt="Doodly - Multiplayer drawing game with real-time synchronization" width="300" height="200">
+                        <div class="project-info">
+                            <h3>Doodly - Multiplayer Game</h3>
+                            <p>A real-time <strong>multiplayer drawing and guessing game</strong> supporting up to 8 players per room with synchronized canvas, turn-based gameplay, live chat, and scoring system.</p>
+                            <p>Designed a private room system with dynamic random theming, custom settings, and less than 150ms latency using <strong>Socket.io and Node.js</strong>.</p>
+                            <a href="https://github.com/saysamarth/Doodly" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View Doodly project on GitHub">
+                                View on GitHub 
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 3 -->
+                      <article class="project-card" data-aos="flip-left">
+                        <img src="assets/images/TrackMyAttendance.jpeg" alt="TrackMyAttendance - Flutter attendance tracking app with geolocation" width="300" height="200">
+                        <div class="project-info">
+                            <h3>TrackMyAttendance</h3>
+                            <p>A real-time <strong>attendance tracking app</strong> with Firebase integration, utilizing geolocation and image capture for secure check-ins and check-outs.</p>
+                            <p>Features include attendance history, monthly reports visualized in pie charts, location mapping, secure authentication, and user feedback through snack bars and dialogs.</p>
+                            <a href="https://github.com/saysamarth/TrackMyAttendance" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View TrackMyAttendance project on GitHub">
+                                View on GitHub 
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section" data-aos="fade-up">
+            <div class="section-container">
+                <h2 class="section-title">Professional Experience</h2>
                 
-                <!-- Professional Skills (keeping this part as is) -->
-                <div class="skill-column" data-aos="fade-left">
-                    <div class="skill-card">
-                        <h3>Professional Skills</h3>
-                        <div class="circles-container">
-                            <div class="skill-circle">
-                                <div class="circle" data-percent="85">
-                                    <span>85%</span>
-                                </div>
-                                <div class="skill-name">Adaptive Problem-Solving</div>
+                <div class="experience-column">
+                    <article class="experience-item" data-aos="fade-up">
+                        <div class="experience-header">
+                            <div class="experience-date">
+                                <time datetime="2024-12">December 2024</time> - <time datetime="2025-02">February 2025</time>
                             </div>
-                            <div class="skill-circle">
-                                <div class="circle" data-percent="80">
-                                    <span>80%</span>
-                                </div>
-                                <div class="skill-name">Collaborative Leadership</div>
-                            </div>
-                            <div class="skill-circle">
-                                <div class="circle" data-percent="90">
-                                    <span>90%</span>
-                                </div>
-                                <div class="skill-name">TeamWork</div>
-                            </div>
-                            <div class="skill-circle">
-                                <div class="circle" data-percent="80">
-                                    <span>80%</span>
-                                </div>
-                                <div class="skill-name">Communication</div>
+                            <h3>Software Developer Intern</h3>
+                            <div class="company">Jaymant & Sons (OPC) Pvt. Ltd.</div>
+                        </div>
+                        <div class="experience-content">
+                            <p>Developed scalable and user-friendly UI/UX components as a <strong>Flutter developer</strong>, integrating REST APIs and Firebase for real-time data handling. Implemented BLoC for state management, reducing unnecessary widget rebuilds, and improving performance by 20%. Collaborated with a team of 4+ members to build features for a cross-platform mobile app targeting 10,000+ users.</p>
+                            <div class="skills-used">
+                                <span class="skill-tag">Flutter</span>
+                                <span class="skill-tag">Firebase</span>
+                                <span class="skill-tag">REST API</span>
+                                <span class="skill-tag">BLoC</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
+
+                    <article class="experience-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="experience-header">
+                            <div class="experience-date">
+                                <time datetime="2024-07">July 2024</time> - <time datetime="2024-08">August 2024</time>
+                            </div>
+                            <h3>Summer Internship - AI/ML Focus</h3>
+                            <div class="company">IBM SkillsBuild Summer Internship Program (CSRBOX)</div>
+                        </div>
+                        <div class="experience-content">
+                            <p>Developed a <strong>healthcare chatbot prototype</strong> using IBM Watson Assistant, optimizing over 30 user interactions through prompt engineering. Applied <strong>AI/ML tools</strong> to create a functional model that streamlined responses to common queries and booking requests, achieving 80% coverage of frequently asked questions during the CSRBOX internship.</p>
+                            <div class="skills-used">
+                                <span class="skill-tag">AI/ML</span>
+                                <span class="skill-tag">NLP</span>
+                                <span class="skill-tag">IBM Watson Assistant</span>
+                                <span class="skill-tag">GenAI</span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="section" data-aos="fade-up">
-        <div class="section-container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card" data-aos="flip-left" data-aos-delay="200">
-                    <img src="assets/images/Brevity.jpg" alt="News App">
-                    <div class="project-info">
-                        <h3>BREVITY</h3>
-                        <p>A real-time news app delivering concise 60-word summaries, featuring infinite scrolling, category-based feeds, and
-                            customizable themes for an engaging experience.
-                        </p><p>Key features include an AI chatbot for news queries, robust keyword search, direct full article access, optimized image
-                            caching, bookmarking, and dynamic routing for smooth navigation</p>
-                        <a href="https://github.com/Yash159357/BREVITY" class="project-link">
-                            View on GitHub 
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>  
-                <!-- Project 2 -->
-                <div class="project-card" data-aos="flip-left">
-                    <img src="assets/images/TrackMyAttendance.jpeg" alt="Attendance Tracker">
-                    <div class="project-info">
-                        <h3>TrackMyAttendance</h3>
-                        <p>A real-time attendance tracking app with Firebase integration, utilizing geolocation (Geolocator) and image capture
-                            (ImagePicker) for secure check-ins and check-outs.
-                        </p><p>Features include attendance history, monthly reports visualized in pie charts, location mapping, secure authentication,
-                            and user feedback through snack bars and dialogs.</p>
-                        <a href="https://github.com/saysamarth/TrackMyAttendance" class="project-link">
-                            View on GitHub 
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-card" data-aos="flip-left">
-                    <img src="assets/images/expenseTracker.jpeg" alt="Expense Tracker">
-                    <div class="project-info">
-                        <h3>Expense Tracker</h3>
-                        <p>About
-                            This is a Flutter-based expense tracking app. It may be used in both light and dark modes, according to the system mode. 
-                            The software will create a chart based on the expenses under the specified category after the user adds expenses under that category. Additionally, the user can remove the expenses as needed.
-                        </p>
-                        <a href="https://github.com/saysamarth/Expense-Tracker" class="project-link">
-                            View on GitHub 
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="section" data-aos="fade-up">
-        <div class="section-container">
-            <h2 class="section-title">Work Experience</h2>
-            
-            <div class="experience-column">
-                <div class="experience-item" data-aos="fade-up">
-                    <div class="experience-header">
-                        <div class="experience-date">Dec 2024 - Feb 2025</div>
-                        <h3>Software Developer Intern </h3>
-                        <div class="company">Jaymant & Sons (OPC) Pvt. Ltd. </div>
-                    </div>
-                    <div class="experience-content">
-                        <p>Developed scalable and user-friendly UI/UX components, integrating REST APIs and Firebase for real-time data
-                            handling.
-                            Implemented Bloc for state management, reducing unnecessary widget rebuilds, and improving performance by 20%
-                            Collaborated with a team of 4+ members to build features for a cross-platform app targeting 10,000+ users</p>
-                        <div class="skills-used">
-                            <span class="skill-tag">Flutter</span>
-                            <span class="skill-tag">Firebase</span>
-                            <span class="skill-tag">REST API</span>
-                            <span class="skill-tag">BLoC</span>
+        <!-- Contact Section -->
+        <section id="contact" class="section" data-aos="fade-up">
+            <div class="section-container">
+                <h2 class="section-title">Contact Samarth Sharma</h2>
+                <div class="contact-container">
+                    <div class="contact-info" data-aos="fade-right">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <p>New Delhi, India</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <p><a href="mailto:samarth2668@gmail.com">samarth2668@gmail.com</a></p>
+                        </div>
+                        <div class="social-links" role="list" aria-label="Contact links">
+                            <a href="https://github.com/saysamarth" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/saysamarth/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="mailto:samarth2668@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Send email">
+                                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            </a>
                         </div>
                     </div>
-                </div>
-
-                <div class="experience-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="experience-header">
-                        <div class="experience-date">July 2024 - August 2024</div>
-                        <h3>Summer Internship</h3>
-                        <div class="company">IBM SkillsBuild Summer Internship Program (CSRBOX)</div>
-                    </div>
-                    <div class="experience-content">
-                        <p>Developed a healthcare chatbot prototype using IBM Watson Assistant, optimizing over 30 user interactions
-                            through prompt engineering.
-                            Applied AI tools to create a functional model that streamlined responses to common queries and booking requests,
-                            achieving 80% coverage of frequently asked questions during the CSRBOX internship.</p>
-                        <div class="skills-used">
-                            <span class="skill-tag">AI</span>
-                            <span class="skill-tag">NLP</span>
-                            <span class="skill-tag">IBM Watson Assistant</span>
-                        </div>
-                    </div>
+                    <form class="contact-form" 
+                        action="https://formspree.io/f/xdkeplvj" 
+                        method="POST"
+                        data-aos="fade-left"
+                        id="myForm"
+                        aria-label="Contact form">
+                        <input type="text" name="name" placeholder="Your Name" required aria-label="Your name">
+                        <input type="email" name="email" placeholder="Your Email" required aria-label="Your email address">
+                        <textarea name="message" placeholder="Your Message" required aria-label="Your message"></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section" data-aos="fade-up">
-        <div class="section-container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-container">
-                <div class="contact-info" data-aos="fade-right">
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>New Delhi, India</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>samarth2668@gmail.com</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/saysamarth" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/saysamarth/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="mailto:samarth2668@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i></a>
-                    </div>
-                </div>
-                <form class="contact-form" 
-                    action="https://formspree.io/f/xdkeplvj" 
-                    method="POST"
-                    data-aos="fade-left"
-                    id="myForm">
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <textarea name="message" placeholder="Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+    <!-- Footer -->
+    <footer role="contentinfo" style="text-align: center; padding: 1em 0;">
+        <p>&copy; 2025 Samarth Sharma. All rights reserved. Flutter Developer | Software Engineer | GGSIPU</p>
+    </footer>
+
+
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
