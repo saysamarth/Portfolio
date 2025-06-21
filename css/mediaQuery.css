@@ -1,55 +1,131 @@
-/* Media Queries */
 @media (max-width: 768px) {
-    :root {
-        --section-padding: 4rem 5%;
-        --standard-padding: 1.5rem;
-        --card-padding: 1.2rem;
-    }
-    
-    .links {
-        display: none;
-    }
+  /* Navigation */
+  .nav-container {
+    padding: 0.8rem 5%;
+  }
+  
+  .hamburg, .cancel {
+    font-size: 1.8rem;
+    z-index: 10000;
+  }
+  
+  .mobile-links {
+    gap: 1.8rem;
+  }
+  
+  .mobile-links a {
+    font-size: 1.4rem;
+    padding: 0.8rem;
+  }
+  
+  /* Home Section */
+  .home-section {
+    padding-top: 6rem;
+  }
+  
+  .main-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .image, .content {
+    width: 100%;
+  }
+  
+  .image img {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+  
+  .typewriter {
+    min-height: 80px;
+  }
+  
+  /* Skills Section */
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .circles-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Experience */
+  .experience-item {
+    padding: 1.2rem;
+  }
+  
+  /* Contact */
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .info-item {
+    padding: 0.8rem;
+  }
+}
 
-    .hamburg, .cancel {
-        display: block;
-    }
+/* Landscape Orientation Fixes */
+@media (max-width: 768px) and (orientation: landscape) {
+  .home-section {
+    padding-top: 5rem;
+  }
+  
+  .main-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .image {
+    width: 40%;
+  }
+  
+  .content {
+    width: 60%;
+    padding-left: 1.5rem;
+  }
+  
+  .typewriter {
+    min-height: 40px;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}
 
-    .main-container {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 5rem;
-    }
-
-    .image, .content {
-        width: 100%;
-    }
-
-    .content h1 {
-        font-size: 2.5rem;
-    }
-
-    .typewriter {
-        font-size: 1.5rem;
-    }
-    
-    .skills-container {
-        grid-template-columns: 1fr;
-        gap: var(--standard-gap);
-    }
-    
-    .circles-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .skill-circle {
-        animation: fillCircle 0.6s ease-out forwards;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
+/* Small Phones */
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 3rem 5%;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .circle {
+    width: 85px;
+    height: 85px;
+  }
+  
+  .skill-tag {
+    font-size: 0.8rem;
+  }
 }

@@ -71,3 +71,15 @@ button:hover {
     background: rgba(100, 255, 218, 0.1);
     transform: translateY(-2px);
 }
+
+/* Minimum touch target size */
+a, button, .skill-tag, .project-link {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Visual feedback for touch */
+.project-card.active-touch {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(100, 255, 218, 0.1);
+}

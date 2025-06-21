@@ -207,3 +207,25 @@ nav {
 .about-text p:last-child {
     margin-bottom: 0;
 }
+
+/* Navigation */
+@media (max-width: 768px) {
+  .dropdown {
+    padding-top: 3rem;
+  }
+  
+  .mobile-links a {
+    font-size: 1.3rem;
+  }
+}
+
+/* Home Section */
+@media (max-width: 768px) {
+  .content h1 {
+    margin-top: 1.5rem;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}

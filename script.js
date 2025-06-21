@@ -62,6 +62,7 @@ const Navigation = {
                 hamburgButton.setAttribute('aria-expanded', 'true');
             }
         }
+        document.documentElement.style.overflow = "hidden";
     },
     
     closeMenu: function() {
@@ -77,6 +78,7 @@ const Navigation = {
                 hamburgButton.setAttribute('aria-expanded', 'false');
             }
         }
+        document.documentElement.style.overflow = "auto";
     }
 };
 
@@ -183,16 +185,14 @@ const ProjectEffects = {
             
             // Touch events for mobile
             card.addEventListener('touchstart', () => {
-                card.style.transform = 'translateY(-5px)';
-            }, { passive: true });
-            
-            card.addEventListener('touchend', () => {
-                setTimeout(() => {
-                    card.style.transform = 'translateY(0)';
-                }, 200);
-            }, { passive: true });
-        });
-    }
+        card.classList.add('active-touch');
+      }, { passive: true });
+      
+      card.addEventListener('touchend', () => {
+        card.classList.remove('active-touch');
+      }, { passive: true });
+    });
+  }
 };
 
 // Contact Form Effects Module - Enhanced with validation and analytics
