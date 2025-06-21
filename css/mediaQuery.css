@@ -1,131 +1,431 @@
 @media (max-width: 768px) {
+  /* Reset section padding for mobile */
+  :root {
+    --section-padding: 2rem 4%;
+    --standard-padding: 1rem;
+    --standard-gap: 1rem;
+  }
+
   /* Navigation */
   .nav-container {
-    padding: 0.8rem 5%;
+    padding: 0.6rem 4%;
   }
   
-  .hamburg, .cancel {
-    font-size: 1.8rem;
-    z-index: 10000;
+  .logo span {
+    font-size: 1.4rem;
+  }
+  
+  .links {
+    display: none;
+  }
+  
+  .hamburg {
+    display: block;
+    font-size: 1.6rem;
+  }
+  
+  .cancel {
+    display: block;
   }
   
   .mobile-links {
-    gap: 1.8rem;
+    gap: 1.5rem;
   }
   
   .mobile-links a {
-    font-size: 1.4rem;
-    padding: 0.8rem;
+    font-size: 1.2rem;
+    padding: 0.6rem;
   }
   
-  /* Home Section */
+  /* Home Section - More Compact */
   .home-section {
-    padding-top: 6rem;
+    padding: 4rem 4% 2rem;
+    min-height: 85vh;
   }
   
   .main-container {
     flex-direction: column;
     text-align: center;
+    gap: 1rem;
   }
   
   .image, .content {
     width: 100%;
   }
   
+  .image {
+    order: 1;
+    margin-bottom: 1rem;
+  }
+  
+  .content {
+    order: 2;
+  }
+  
   .image img {
-    max-width: 70%;
+    max-width: 60%;
     margin: 0 auto;
   }
   
-  .typewriter {
-    min-height: 80px;
+  .content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    margin-top: 0;
   }
   
-  /* Skills Section */
+  .typewriter {
+    min-height: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .typewriter .text {
+    font-size: 1.3rem;
+  }
+  
+  .content p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .social-links {
+    justify-content: center;
+    margin: 1rem 0;
+    gap: 1rem;
+  }
+  
+  .social-links a {
+    font-size: 1.3rem;
+  }
+  
+  /* About Section */
+  .about-content {
+    padding: 0;
+  }
+  
+  .about-text {
+    padding: 1rem;
+  }
+  
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0.5rem 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  /* Skills Section - More Compact */
   .skills-container {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .skill-card {
+    padding: 1rem;
+  }
+  
+  .skill-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .skill-category {
+    margin-bottom: 1rem;
+  }
+  
+  .skill-header h4 {
+    font-size: 1rem;
+  }
+  
+  .skill-tags {
+    gap: 0.4rem;
+  }
+  
+  .skill-tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
   }
   
   .circles-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 1rem;
   }
   
   .circle {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    font-size: 0.8rem;
   }
   
-  /* Projects */
+  .skill-name {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Projects - More Compact */
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
   .project-card {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
+    padding: 1rem;
+  }
+  
+  .project-card img {
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .project-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .project-info p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
   }
   
   /* Experience */
   .experience-item {
-    padding: 1.2rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .experience-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .experience-date {
+    font-size: 0.8rem;
+  }
+  
+  .company {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .experience-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
   
   /* Contact */
   .contact-container {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   
   .info-item {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
     padding: 0.8rem;
+  }
+  
+  .contact-form button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Section Titles */
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .section-title::after {
+    width: 60px;
+    height: 2px;
   }
 }
 
-/* Landscape Orientation Fixes */
+/* Landscape Orientation - More Compact */
 @media (max-width: 768px) and (orientation: landscape) {
   .home-section {
-    padding-top: 5rem;
+    padding-top: 3rem;
+    min-height: 100vh;
   }
   
   .main-container {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    gap: 1rem;
   }
   
   .image {
-    width: 40%;
+    width: 35%;
+    order: 2;
   }
   
   .content {
-    width: 60%;
-    padding-left: 1.5rem;
+    width: 65%;
+    text-align: left;
+    order: 1;
   }
   
-  .typewriter {
-    min-height: 40px;
-  }
-  
-  .social-links {
-    justify-content: center;
-  }
-}
-
-/* Small Phones */
-@media (max-width: 480px) {
-  :root {
-    --section-padding: 3rem 5%;
-  }
-  
-  .section-title {
+  .content h1 {
     font-size: 1.8rem;
   }
   
+  .typewriter {
+    min-height: 35px;
+  }
+  
+  .typewriter .text {
+    font-size: 1.1rem;
+  }
+  
+  .content p {
+    font-size: 0.85rem;
+    padding: 0;
+  }
+  
+  .social-links {
+    justify-content: flex-start;
+    margin: 0.8rem 0;
+  }
+}
+
+/* Small Phones - Very Compact */
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 1.5rem 3%;
+    --standard-padding: 0.8rem;
+  }
+  
+  /* Navigation */
+  .nav-container {
+    padding: 0.5rem 3%;
+  }
+  
+  .logo span {
+    font-size: 1.2rem;
+  }
+  
+  /* Home Section */
+  .home-section {
+    padding: 3.5rem 3% 1.5rem;
+    min-height: 80vh;
+  }
+  
+  .image img {
+    max-width: 55%;
+  }
+  
+  .content h1 {
+    font-size: 1.7rem;
+  }
+  
+  .typewriter .text {
+    font-size: 1.1rem;
+  }
+  
+  .content p {
+    font-size: 0.85rem;
+    padding: 0 0.5rem;
+  }
+  
+  /* Section Titles */
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Skills */
   .circle {
-    width: 85px;
-    height: 85px;
+    width: 70px;
+    height: 70px;
+    font-size: 0.7rem;
   }
   
   .skill-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  .skill-name {
+    font-size: 0.75rem;
+  }
+  
+  /* Projects */
+  .project-card {
+    padding: 0.8rem;
+  }
+  
+  .project-card img {
+    height: 120px;
+  }
+  
+  .project-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .project-info p {
+    font-size: 0.85rem;
+  }
+  
+  /* Experience */
+  .experience-item {
+    padding: 0.8rem;
+  }
+  
+  .experience-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  /* Contact */
+  .info-item {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.85rem;
+    padding: 0.7rem;
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 360px) {
+  :root {
+    --section-padding: 1rem 2%;
+  }
+  
+  .home-section {
+    padding: 3rem 2% 1rem;
+  }
+  
+  .content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .typewriter .text {
+    font-size: 1rem;
+  }
+  
+  .content p {
     font-size: 0.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .circle {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .project-card img {
+    height: 100px;
   }
 }
