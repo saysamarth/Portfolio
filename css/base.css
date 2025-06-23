@@ -83,3 +83,78 @@ a, button, .skill-tag, .project-link {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(100, 255, 218, 0.1);
 }
+
+/* Add this to your base.css file */
+
+/* Enhanced smooth scrolling - works as fallback */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure sections have proper scroll margin for fixed nav */
+section {
+    /* Adjust this value based on your actual nav height */
+    scroll-margin-top: 60px; /* Increased from 80px to account for nav padding */
+}
+
+/* Specific scroll margins for different sections if needed */
+#home {
+    scroll-margin-top: 0; /* Home section can start at top */
+}
+
+#about,
+#skills,
+#experience,
+#projects,
+#contact {
+    scroll-margin-top: 60px; /* Adjust based on your nav height */
+}
+
+/* Enhanced navigation active state */
+.links .link a.active {
+    color: var(--accent-color);
+    position: relative;
+}
+
+.links .link a.active::after {
+    width: 100%;
+    background: var(--accent-color);
+}
+
+/* Smooth transitions for active nav highlighting */
+.links .link a {
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.links .link a:hover {
+    transform: translateY(-1px);
+}
+
+/* Enhanced mobile menu smooth scrolling */
+.mobile-links a {
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.mobile-links a:hover {
+    transform: translateX(5px);
+}
+
+/* Ensure smooth scrolling works on all browsers */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

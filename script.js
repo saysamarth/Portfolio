@@ -81,38 +81,213 @@ const Navigation = {
         document.documentElement.style.overflow = "auto";
     }
 };
-
 // Smooth Scrolling Module - Enhanced with performance
 const SmoothScroll = {
+    // Animation state
+    isAnimating: false,
+    animationId: null,
+    
     init: function() {
+        // Get the actual nav height dynamically
+        this.getNavHeight();
+        
+        // Handle all anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (!target) return;
+            anchor.addEventListener('click', this.handleSmoothScroll.bind(this));
+        });
+        
+        // Update nav height on window resize (debounced)
+        window.addEventListener('resize', this.debounce(this.getNavHeight.bind(this), 100), { passive: true });
+        
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', this.handlePopState.bind(this), { passive: true });
+    },
+    
+    getNavHeight: function() {
+        const nav = document.querySelector('nav');
+        if (nav) {
+            // Use getBoundingClientRect for more accurate measurement
+            this.navHeight = nav.getBoundingClientRect().height + 10;
+        } else {
+            this.navHeight = 90; // Fallback value
+        }
+    },
+    
+    // Debounce function to limit resize event calls
+    debounce: function(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    },
+    
+    handleSmoothScroll: function(e) {
+        e.preventDefault();
+        
+        // Prevent multiple animations
+        if (this.isAnimating) {
+            this.cancelAnimation();
+        }
+        
+        const targetId = e.currentTarget.getAttribute('href');
+        const target = document.querySelector(targetId);
+        
+        if (!target) return;
+        
+        // Close mobile menu if open
+        if (window.innerWidth <= 768) {
+            Navigation.closeMenu();
+        }
+        
+        // Calculate positions once to avoid repeated DOM queries
+        const startPosition = window.pageYOffset;
+        const targetRect = target.getBoundingClientRect();
+        const targetPosition = targetRect.top + startPosition - this.navHeight;
+        const distance = targetPosition - startPosition;
+        
+        // Skip animation if already at target
+        if (Math.abs(distance) < 1) {
+            this.updateActiveNav(targetId);
+            this.updateURL(targetId);
+            return;
+        }
+        
+        // Calculate duration based on distance - SUPER FAST like original
+        const duration = Math.min(300, Math.max(150, Math.abs(distance) * 0.1));
+        
+        // Start custom smooth scroll animation
+        this.animateScroll(startPosition, targetPosition, duration, targetId, target);
+    },
+    
+    // Custom smooth scroll with easing
+    animateScroll: function(startPos, targetPos, duration, targetId, targetElement) {
+        const startTime = performance.now();
+        this.isAnimating = true;
+        
+        const animate = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Linear easing for maximum speed - no slow start/end
+            const linear = progress;
+            
+            // Calculate current position
+            const currentPos = startPos + (targetPos - startPos) * linear;
+            
+            // Apply scroll position
+            window.scrollTo(0, currentPos);
+            
+            // Continue animation if not complete
+            if (progress < 1) {
+                this.animationId = requestAnimationFrame(animate);
+            } else {
+                // Animation complete
+                this.isAnimating = false;
+                this.animationId = null;
                 
-                const headerOffset = 80;
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                // Ensure exact final position
+                window.scrollTo(0, targetPos);
                 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-                
-                // Update URL hash for SEO (without jumping)
-                if (history.pushState) {
-                    history.pushState(null, null, this.getAttribute('href'));
-                }
+                // Update URL and navigation
+                this.updateURL(targetId);
+                this.updateActiveNav(targetId);
                 
                 // Focus management for accessibility
+                this.handleFocus(targetElement);
+            }
+        };
+        
+        // Start the animation
+        this.animationId = requestAnimationFrame(animate);
+    },
+    
+    // Cancel ongoing animation
+    cancelAnimation: function() {
+        if (this.animationId) {
+            cancelAnimationFrame(this.animationId);
+            this.animationId = null;
+        }
+        this.isAnimating = false;
+    },
+    
+    // Handle URL updates
+    updateURL: function(targetId) {
+        if (history.pushState) {
+            history.pushState(null, null, targetId);
+        }
+    },
+    
+    // Handle focus for accessibility
+    handleFocus: function(target) {
+        // Use setTimeout to ensure scroll is complete
+        setTimeout(() => {
+            // Only set tabindex if element doesn't already have one
+            const currentTabIndex = target.getAttribute('tabindex');
+            if (!currentTabIndex) {
                 target.setAttribute('tabindex', '-1');
-                target.focus();
-            });
+            }
+            
+            // Focus with try-catch for safety
+            try {
+                target.focus({ preventScroll: true });
+            } catch (e) {
+                console.warn('Focus failed:', e);
+            }
+        }, 50); // Reduced timeout for better responsiveness
+    },
+    
+    updateActiveNav: function(targetId) {
+        // Cache selectors for better performance
+        const navLinks = document.querySelectorAll('.links .link a, .mobile-links a');
+        const targetLinks = document.querySelectorAll(`a[href="${targetId}"]`);
+        
+        // Remove active class from all nav links
+        navLinks.forEach(link => {
+            link.classList.remove('active');
         });
+        
+        // Add active class to current link
+        targetLinks.forEach(link => {
+            link.classList.add('active');
+        });
+    },
+    
+    // Handle browser back/forward navigation
+    handlePopState: function(e) {
+        const hash = window.location.hash;
+        if (hash) {
+            const target = document.querySelector(hash);
+            if (target) {
+                // Scroll without animation for back/forward
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - this.navHeight;
+                window.scrollTo(0, targetPosition);
+                this.updateActiveNav(hash);
+            }
+        }
+    },
+    
+    // Public method to scroll to any element programmatically
+    scrollToElement: function(selector, offset = 0) {
+        const target = document.querySelector(selector);
+        if (!target) return false;
+        
+        const startPosition = window.pageYOffset;
+        const targetPosition = target.getBoundingClientRect().top + startPosition - this.navHeight - offset;
+        const distance = targetPosition - startPosition;
+        
+        if (Math.abs(distance) < 1) return true;
+        
+        const duration = Math.min(300, Math.max(150, Math.abs(distance) * 0.1));
+        this.animateScroll(startPosition, targetPosition, duration, '', target);
+        
+        return true;
     }
 };
-
 // Skills Animation Module - Optimized with Intersection Observer
 const SkillsAnimation = {
     init: function() {
@@ -321,8 +496,8 @@ const ContactFormEffects = {
 // Active Navigation Highlight Module - Optimized with throttling
 const ActiveNavHighlight = {
     init: function() {
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.links .link a');
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.links .link a, .mobile-links a');
         
         if (sections.length === 0 || navLinks.length === 0) return;
         
@@ -330,19 +505,28 @@ const ActiveNavHighlight = {
         
         const updateActiveNav = () => {
             let current = '';
+            const scrollPosition = window.pageYOffset + 150; // Offset for better detection
             
+            // Find the current section
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
+                const sectionHeight = section.offsetHeight;
                 
-                if (pageYOffset >= sectionTop - 200 && pageYOffset < sectionTop + sectionHeight - 200) {
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                     current = section.getAttribute('id');
                 }
             });
             
+            // If we're at the very top, highlight home
+            if (window.pageYOffset < 100) {
+                current = 'home';
+            }
+            
+            // Update navigation highlights
             navLinks.forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
+                const href = link.getAttribute('href');
+                if (href === `#${current}`) {
                     link.classList.add('active');
                 }
             });
