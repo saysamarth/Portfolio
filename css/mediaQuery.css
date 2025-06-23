@@ -39,14 +39,15 @@
   
   /* Home Section - More Compact */
   .home-section {
-    padding: 4rem 4% 2rem;
-    min-height: 85vh;
+    padding: 9rem 4% 2rem;
+    min-height: 90vh;
   }
   
   .main-container {
     flex-direction: column;
     text-align: center;
-    gap: 1rem;
+    gap: 1.5rem;
+    margin-top: 0;
   }
   
   .image, .content {
@@ -56,10 +57,12 @@
   .image {
     order: 1;
     margin-bottom: 1rem;
+    z-index: 1;
   }
   
   .content {
     order: 2;
+    z-index: 1;
   }
   
   .image img {
@@ -98,20 +101,74 @@
     font-size: 1.3rem;
   }
   
-  /* About Section */
+  /* About Section - Mobile Optimized */
   .about-content {
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 100%;
+  }
+  
+  .about-image {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1px;
+  }
+  
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    padding: 1.2rem 0.8rem;
+  }
+  
+  .stat-item {
+    padding: 0.8rem 0.5rem;
+    border-radius: 6px;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
   }
   
   .about-text {
-    padding: 1rem;
+    padding: 0 0.5rem;
+    text-align: left;
+  }
+  
+  .about-text h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .about-text h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
   }
   
   .about-text p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.6;
-    padding: 0.5rem 0.8rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
+  
+  .about-highlights {
+    justify-content: center;
+    margin-top: 1.5rem;
+    gap: 0.6rem;
+  }
+  
+  .highlight-item {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
   }
   
   /* Skills Section - More Compact */
@@ -245,12 +302,23 @@
     width: 60px;
     height: 2px;
   }
+
+  /* Header/Nav: Ensure not overlapping with main image */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(16, 36, 62, 0.98);
+    border-bottom: 1px solid var(--accent-border);
+  }
 }
 
 /* Landscape Orientation - More Compact */
 @media (max-width: 768px) and (orientation: landscape) {
   .home-section {
-    padding-top: 3rem;
+    padding-top: 5rem;
     min-height: 100vh;
   }
   
@@ -312,8 +380,8 @@
   
   /* Home Section */
   .home-section {
-    padding: 3.5rem 3% 1.5rem;
-    min-height: 80vh;
+    padding: 8rem 3% 1.5rem;
+    min-height: 85vh;
   }
   
   .image img {
@@ -391,6 +459,14 @@
   .contact-form textarea {
     font-size: 0.85rem;
     padding: 0.7rem;
+  }
+
+  .about-content {
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+  .about-text h3 {
+    font-size: 1.1rem;
   }
 }
 

@@ -109,6 +109,7 @@ nav {
     display: flex;
     align-items: center;
     padding: 8rem 7% 0;
+    margin-top: 0;
 }
 
 .main-container {
