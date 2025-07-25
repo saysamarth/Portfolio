@@ -9,19 +9,29 @@
 }
 
 :root {
-    --bg-color: #0a192f;
-    --text-color: #ccd6f6;
-    --accent-color: #64ffda;
-    --navy-shadow: rgba(2,12,27,0.7);
+    /* "Celestial Iris" Theme */
+    --bg-color: #0B1215;
+    /* Keeping the approved deep, rich background */
+    --text-color: #F1F1F1;
+    --text-color-muted: #9E9E9E;
+
+    /* New elegant and vibrant accents */
+    --accent-color: #1ec9e0; /* Rich Sapphire Blue */
+    --accent-color-secondary: #117e9e; /* Bright Teal */
+    --accent-gradient: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-color-secondary) 100%);
+
+    /* Glassmorphism to match the deep, rich theme */
+    --glass-bg: rgba(25, 35, 40, 0.1);
+    --glass-border: 1px solid rgba(241, 241, 241, 0.1);
+    --blur-effect: blur(10px);
+
+    /* Standard layout variables */
     --standard-padding: 2rem;
     --section-padding: 3.5rem 7%;
     --card-padding: 1.5rem;
     --border-radius-sm: 8px;
     --border-radius-md: 10px;
     --border-radius-lg: 12px;
-    --accent-bg-light: rgba(100, 255, 218, 0.05);
-    --accent-border: rgba(100, 255, 218, 0.1);
-    --text-color-muted: rgba(204, 214, 246, 0.9);
     --standard-gap: 1.5rem;
     --standard-transition: all 0.3s ease;
 }
@@ -31,6 +41,53 @@ body {
     color: var(--text-color);
     overflow-x: hidden;
     line-height: 1.6;
+}
+
+.background-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(150px);
+    opacity: 0.2;
+}
+
+.shape-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--accent-color);
+    /* Iris Purple */
+    top: -100px;
+    left: -100px;
+    animation: drift 25s infinite alternate ease-in-out;
+}
+
+.shape-2 {
+    width: 500px;
+    height: 500px;
+    background: var(--accent-color-secondary);
+    /* Teal */
+    bottom: -150px;
+    right: -150px;
+    animation: drift 30s infinite alternate-reverse ease-in-out;
+}
+
+.shape-3 {
+    display: block;
+    width: 300px;
+    height: 300px;
+    background: var(--accent-color);
+    bottom: 40%;
+    right: 40%;
+    animation: drift 20s infinite alternate ease-in-out;
 }
 
 /* Common Components */
@@ -53,8 +110,9 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 100px;
-    height: 3px;
-    background: var(--accent-color);
+    height: 4px;
+    background: var(--accent-gradient);
+    border-radius: 2px;
 }
 
 button {
@@ -69,23 +127,25 @@ button {
 }
 
 button:hover {
-    background: rgba(100, 255, 218, 0.1);
+    background: rgba(124, 58, 237, 0.1);
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
     transform: translateY(-2px);
 }
 
 /* Minimum touch target size */
-a, button, .skill-tag, .project-link {
-  min-height: 44px;
-  min-width: 44px;
+a,
+button,
+.skill-tag,
+.project-link {
+    min-height: 44px;
+    min-width: 44px;
 }
 
 /* Visual feedback for touch */
 .project-card.active-touch {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(100, 255, 218, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.1);
 }
-
-/* Add this to your base.css file */
 
 /* Enhanced smooth scrolling - works as fallback */
 html {
@@ -94,21 +154,12 @@ html {
 
 /* Ensure sections have proper scroll margin for fixed nav */
 section {
-    /* Adjust this value based on your actual nav height */
-    scroll-margin-top: 40px; /* Increased from 80px to account for nav padding */
+    scroll-margin-top: 40px;
 }
 
-/* Specific scroll margins for different sections if needed */
 #home {
-    scroll-margin-top: 0; /* Home section can start at top */
-}
-
-#about,
-#skills,
-#experience,
-#projects,
-#contact {
-    scroll-margin-top: 40px; /* Adjust based on your nav height */
+    scroll-margin-top: 0;
+    /* Home section can start at top */
 }
 
 /* Enhanced navigation active state */
@@ -140,22 +191,19 @@ section {
     transform: translateX(5px);
 }
 
-/* Ensure smooth scrolling works on all browsers */
-@media (prefers-reduced-motion: no-preference) {
-    html {
-        scroll-behavior: smooth;
-    }
-}
-
 /* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
     }
-    
+
     * {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+    }
+
+    .shape {
+        display: none;
     }
 }

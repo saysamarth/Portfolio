@@ -314,37 +314,44 @@ const SkillsAnimation = {
 };
 
 // Header Scroll Effects Module - Throttled for performance
+// ... inside script.js
+
+// Header Scroll Effects Module - Throttled for performance
 const HeaderEffects = {
-    init: function() {
+    init: function () {
         const nav = document.querySelector('nav');
+        const body = document.body; // Get body element
         if (!nav) return;
-        
+
         let ticking = false;
-        
+
         const updateNav = () => {
             if (window.scrollY > 100) {
                 nav.style.padding = '0.7rem 5%';
                 nav.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
                 nav.classList.add('nav-scrolled');
+                body.classList.add('scrolled'); // Add class to body
             } else {
                 nav.style.padding = '1rem 5%';
                 nav.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.2)';
                 nav.classList.remove('nav-scrolled');
+                body.classList.remove('scrolled'); // Remove class from body
             }
             ticking = false;
         };
-        
+
         const requestTick = () => {
             if (!ticking) {
                 requestAnimationFrame(updateNav);
                 ticking = true;
             }
         };
-        
+
         window.addEventListener('scroll', requestTick, { passive: true });
     }
 };
 
+// ... rest of the script.js file
 // Project Hover Effects Module - Enhanced with touch support
 const ProjectEffects = {
     init: function() {
